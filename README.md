@@ -28,7 +28,8 @@ git clone https://github.com/votre-username/daily-news-aggregator.git
 cd daily-news-aggregator
 2. Installer les dépendances
 bash
-pip install -r requirements.txt
+pip install -r requirements.txt```
+
 3. Configuration des APIs
 🔑 OpenWeatherMap
 Créer un compte sur OpenWeatherMap
