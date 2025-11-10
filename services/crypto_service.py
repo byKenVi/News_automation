@@ -21,7 +21,7 @@ def get_crypto_news():
             'price_change_percentage': '24h'        # Variation sur 24h
         }
         
-        print(f"📡 Appel de l'API CoinGecko...")
+        print(f" Appel de l'API CoinGecko...")
         print(f"   Cryptos: {Config.CRYPTO_IDS}")
         print(f"   Devise: {Config.CRYPTO_CURRENCY}")
                 # 4. APPEL À L'API
@@ -38,13 +38,13 @@ def get_crypto_news():
         """
         response.raise_for_status()
         
-        print(f"✅ API contactée avec succès!")        # 6. TRAITEMENT DES DONNÉES
+        print(f" API contactée avec succès!")        # 6. TRAITEMENT DES DONNÉES
         """
         response.json() convertit la réponse JSON en dictionnaire Python
         """
         cryptos_data = response.json()
         
-        print(f"📊 Données reçues pour {len(cryptos_data)} cryptomonnaie(s)")
+        print(f" Données reçues pour {len(cryptos_data)} cryptomonnaie(s)")
         
         # 7. FORMATAGE DES RÉSULTATS
         crypto_news = []
@@ -88,7 +88,7 @@ def get_crypto_news():
                 'price_change': price_change  # Gardé pour traitement ultérieur
             })
             
-            print(f"   ✅ {name} traité")        # 11. RETOUR DU RÉSULTAT
+            print(f"    {name} traité")        # 11. RETOUR DU RÉSULTAT
         return crypto_news
         
     except requests.exceptions.RequestException as e:

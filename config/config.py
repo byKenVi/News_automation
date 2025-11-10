@@ -1,3 +1,4 @@
+
 import os
 from dotenv import load_dotenv
 
@@ -13,7 +14,7 @@ class Config:
     # 🔑 API Keys (Météo et Actualités)
     WEATHER_API_KEY = os.getenv('WEATHER_API_KEY')
     NEWS_API_KEY = os.getenv('NEWS_API_KEY')
-    # Pas de clé pour Crypto (CoinGecko) 🎉
+    # Pas de clé pour Crypto (CoinGecko) 
     
     # 📧 Configuration Email
     EMAIL_SENDER = os.getenv('EMAIL_SENDER')
@@ -22,11 +23,11 @@ class Config:
     SMTP_SERVER = os.getenv('SMTP_SERVER', 'smtp.gmail.com')  # Valeur par défaut
     SMTP_PORT = int(os.getenv('SMTP_PORT', 587))              # Conversion en nombre
     
-    # 🌍 Configuration Géographique
+    #  Configuration Géographique
     CITY = os.getenv('CITY', 'Paris')
     COUNTRY = os.getenv('COUNTRY', 'FR')
     
-    # 📰 Configuration Actualités
+    #  Configuration Actualités
     NEWS_COUNTRY = os.getenv('NEWS_COUNTRY', 'fr')
     NEWS_PAGE_SIZE = int(os.getenv('NEWS_PAGE_SIZE', 2))
     
@@ -35,10 +36,10 @@ class Config:
     CRYPTO_CURRENCY = os.getenv('CRYPTO_CURRENCY', 'eur')
     CRYPTO_LIMIT = int(os.getenv('CRYPTO_LIMIT', 2))
     
-    # ⏰ Configuration Planification
+    #  Configuration Planification
     SCHEDULE_TIME = os.getenv('SCHEDULE_TIME', '08:00')
     
-    # 🔗 URLs des APIs
+    #  URLs des APIs
     WEATHER_URL = "https://api.openweathermap.org/data/2.5/weather"
     NEWS_URL = "https://newsapi.org/v2/top-headlines"
     CRYPTO_URL = "https://api.coingecko.com/api/v3/coins/markets"

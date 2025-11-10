@@ -33,12 +33,12 @@ pip install -r requirements.txt```
 3. Configuration des APIs
 🔑 OpenWeatherMap
 Créer un compte sur OpenWeatherMap
-
-Obtenir une clé API gratuite
+```
+# Obtenir une clé API gratuite
 
 Ajouter la clé dans le fichier .env
 
-📰 NewsAPI
+#  NewsAPI
 S'inscrire sur NewsAPI
 
 Générer une clé API
@@ -46,16 +46,16 @@ Générer une clé API
 Ajouter la clé dans le fichier .env
 
 ₿ CoinGecko
-Aucune clé requise ! L'API est libre d'accès.
+✅ Aucune clé requise ! L'API est libre d'accès.
 
-Configuration Gmail
+# Configuration Gmail
 Activer la validation en 2 étapes
 
 Générer un mot de passe d'application
 
 Utiliser ce mot de passe dans le fichier .env
 
-4. Configuration de l'environnement
+# Configuration de l'environnement
 Copier le fichier .env.example vers .env :
 
 bash
@@ -79,9 +79,9 @@ COUNTRY=FR
 # Configuration Crypto
 CRYPTO_IDS=bitcoin,ethereum,cardano
 CRYPTO_CURRENCY=eur
+🎯 Utilisation
 
-Utilisation
-Lancer manuellement
+# Lancer manuellement
 bash
 python main.py
 Exécution automatique (Recommandé)
@@ -99,7 +99,7 @@ crontab -e
 Sur Windows (Task Scheduler)
 Créer une tâche planifiée qui exécute main.py quotidiennement.
 
-📁 Structure du Projet
+# Structure du Projet
 text
 daily-news-aggregator/
 ├── config/
@@ -116,7 +116,8 @@ daily-news-aggregator/
 ├── requirements.txt       # Dépendances Python
 ├── main.py               # Point d'entrée
 └── README.md             # Ce fichier
-🔧 Développement
+
+# Développement
 Architecture
 Le projet suit une architecture modulaire :
 
@@ -128,7 +129,7 @@ Gestion d'erreurs : Chaque service gère ses propres erreurs
 
 Sécurité : Clés API stockées dans .env
 
-Ajouter une nouvelle source
+Ajouter une   nouvelle source
 Créer un nouveau fichier dans services/
 
 Implémenter une fonction qui retourne une liste de dictionnaires
@@ -149,30 +150,44 @@ python test_crypto.py
 python test_email.py
 🐛 Dépannage
 Erreurs courantes
- "ModuleNotFoundError: No module named 'config'"
+❌ "ModuleNotFoundError: No module named 'config'"
 
 Vérifier la structure des dossiers
 
 S'assurer que config/ est un dossier, pas un fichier
 
- "Invalid API Key"
+❌ "Invalid API Key"
 
 Vérifier que les clés dans .env sont correctes
 
 S'assurer qu'il n'y a pas d'espaces avant/après
 
- Erreur d'authentification Gmail
+❌ Erreur d'authentification Gmail
 
 Vérifier que la validation en 2 étapes est activée
 
 Utiliser un mot de passe d'application, pas le mot de passe principal
 
- "API rate limit exceeded"
+❌ "API rate limit exceeded"
 
 Attendre quelques minutes avant de réessayer
 
 Vérifier les limites de l'API utilisée
 
+📈 Améliorations Futures
+Interface web de configuration
+
+Base de données pour l'historique
+
+Plus de sources de news
+
+Templates email personnalisables
+
+Système de logs avancé
+
+Tests unitaires complets
+
+Dockerisation
 
 🤝 Contribution
 Les contributions sont les bienvenues ! N'hésitez pas à :
@@ -185,3 +200,90 @@ Commiter vos changements
 
 Ouvrir une Pull Request
 
+📄 Licence
+Ce projet est sous licence MIT. Voir le fichier LICENSE pour plus de détails.
+
+🙏 Remerciements
+OpenWeatherMap pour les données météo
+
+NewsAPI pour les actualités
+
+CoinGecko pour les données cryptomonnaies
+
+Développé avec ❤️ et Python
+
+text
+
+## 📁 Fichiers Supplémentaires à Créer
+
+### **1. `.env.example`**
+```env
+# Configuration des APIs
+WEATHER_API_KEY=votre_cle_openweathermap_ici
+NEWS_API_KEY=votre_cle_newsapi_ici
+
+# Configuration Email
+EMAIL_SENDER=votre.email@gmail.com
+EMAIL_PASSWORD=votre_mot_de_passe_application_gmail
+EMAIL_RECEIVER=destinataire@email.com
+
+# Configuration Géographique
+CITY=Paris
+COUNTRY=FR
+
+# Configuration Crypto
+CRYPTO_IDS=bitcoin,ethereum,cardano
+CRYPTO_CURRENCY=eur
+CRYPTO_LIMIT=2
+
+# Configuration Actualités
+NEWS_COUNTRY=fr
+NEWS_PAGE_SIZE=2
+
+# Configuration Planification
+SCHEDULE_TIME=08:00
+2. .gitignore
+gitignore
+# Environment variables
+.env
+.env.local
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+🚀 Commandes pour Créer le Repo GitHub
+bash
+# Initialiser Git
+git init
+
+# Ajouter tous les fichiers
+git add .
+
+# Premier commit
+git commit -m "Initial commit: Daily News Aggregator MVP"
+
+# Créer le repo sur GitHub (manuellement via l'interface web)
+# Puis lier le repo local au remote
+git remote add origin https://github.com/votre-username/daily-news-aggregator.git
+
+# Pousser le code
+git branch -M main
+git push -u origin main
