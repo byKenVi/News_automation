@@ -37,7 +37,7 @@ class Config:
     CRYPTO_LIMIT = int(os.getenv('CRYPTO_LIMIT', 2))
     
     #  Configuration Planification
-    SCHEDULE_TIME = os.getenv('SCHEDULE_TIME', '08:00')
+    SCHEDULE_TIME = os.getenv('SCHEDULE_TIME', '11:55')
     
     #  URLs des APIs
     WEATHER_URL = "https://api.openweathermap.org/data/2.5/weather"
