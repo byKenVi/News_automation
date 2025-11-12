@@ -61,9 +61,9 @@ def search_detailed_articles(query):
         params = {
             'q': query,
             'sortBy': 'popularity',
-            'language': 'en',
+            'language': 'fr',
             'apiKey': Config.NEWS_API_KEY,
-            'pageSize': 4,  # Plus d'articles par recherche
+            'pageSize': 4,  
             'searchIn': 'title,description'  # Recherche dans titre ET description
         }
         
