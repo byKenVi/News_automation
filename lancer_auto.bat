@@ -1,17 +1,19 @@
 @echo off
-echo LANCEMENT AUTOMATIQUE DU Scripts
-echo %date% %time%
+echo ========================================
+echo    LANCEMENT NEWS AUTOMATIQUE
+echo    %date% %time%
+echo ========================================
 
-cd /d "E:\Code Python\News_automation"
+cd /d "E:\Code python\News_automation"
+
+:: Activer l'environnement virtuel
 call venv\Scripts\activate.bat
 
-python main.py --auto 
+:: Lancer le script (version simplifiée)
+python main.py
 
-if errorlevel 1 (
-    echo Erreur detectée , nouvelle tentative dans 30 secondes...
-    timeout /t 30 /nobreak
-    python main.py 
-)
-
-echo ==
-echo TACHE TERMINEE
+echo ========================================
+echo    EXECUTION TERMINEE
+echo    %date% %time%
+echo ========================================
+timeout /t 10
